@@ -42,8 +42,8 @@ function smileyFaceDavid() {
     //head
     stroke("black");
     fill("yellow");
+    circle(405, 308, 50);
     //eyes
-    circle(400, 300, 50);
     stroke("black");
     fill("pink");
     ellipse(390, 290, 10, 5);
