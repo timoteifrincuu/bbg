@@ -2,11 +2,12 @@ function setup() {
     createCanvas(800, 600);
 }
 
-function draw(){
-    background("200");
-
+function draw() {
+    background(200);
+    smileyFaceDavid();
+    smileyFaceTimo();
     smileyFaceCrys();
-    }
+}
 
 function smileyFaceCrys(){
     //BODY
@@ -37,11 +38,6 @@ function smileyFaceCrys(){
     circle(385, 303, 10);
 }
 
-function draw() {
-    background(200);
-    smileyFaceDavid();
-    smileyFaceTimo();
-}
 function smileyFaceDavid() {
     //head
     stroke("black");
