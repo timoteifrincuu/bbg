@@ -1,15 +1,35 @@
+let tHeight = 1000;
+let tWidth = 1000;
+
+let smileyFaceTimoX = 400;
+let smileyFaceTimoY = 300;
+
+let directionX = 1;
+let directionY = 1;
+
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(tHeight, tWidth);
 }
 
 function draw() {
     background(200);
     smileyFaceDavid(400,300);
-    //smileyFaceTimo();
-    //smileyFaceCrys();
-    smileyFaceDavid();
-    smileyFaceTimo(400, 300);
+    smileyFaceTimo(smileyFaceTimoX, smileyFaceTimoY);
     smileyFaceCrys();
+    checkLimitX();
+    checkLimitY();
+}
+
+function checkLimitX(){
+    if(smileyFaceTimoX>=tWidth)
+    directionX*=-1;
+    smileyFaceTimoX+=directionX;
+}
+
+function checkLimitY(){
+    if(smileyFaceTimoY>=tHeight)
+    directionY*=-1;
+    smileyFaceTimoY+=directionY;
 }
 
 function smileyFaceCrys(){
