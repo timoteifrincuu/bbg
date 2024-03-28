@@ -20,10 +20,10 @@ function draw() {
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
     smileyFaceTimo(400, 300);
-    smileyFaceCrys();
+    smileyFaceCrys(400,300);
 }
 
-function smileyFaceCrys(){
+function smileyFaceCrys(x,y){
     //head
     stroke("green");
     fill("pink");
