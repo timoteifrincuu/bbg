@@ -1,12 +1,17 @@
+let smDavidX=400;
+let smDavidY=300;
+let directionDavidX=5;
+let directionDavidY=55;
 function setup() {
     createCanvas(800, 600);
 }
 
 function draw() {
+    checkLimitsSmDavid();
     background(200);
-    smileyFaceDavid(400,300);
-    //smileyFaceTimo();
-    //smileyFaceCrys();
+    smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
+    smileyFaceTimo();
+    smileyFaceCrys();
 }
 
 function smileyFaceCrys(){
@@ -36,6 +41,17 @@ function smileyFaceCrys(){
    stroke(" ");
     circle(415, 303, 10);
     circle(385, 303, 10);
+}
+function checkLimitsSmDavid()
+{
+    if(smDavidX>=800||smDavidX<=0)
+    {   
+        directionDavidX*=-1;
+    }
+    if(smDavidY>=600||smDavidY<=0)
+    {
+        directionDavidY*=-1;
+    }
 }
 
 function smileyFaceDavid(x,y) {
