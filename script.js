@@ -4,9 +4,9 @@ function setup() {
 
 function draw() {
     background(200);
-    smileyFaceDavid();
-    smileyFaceTimo();
-    smileyFaceCrys();
+    smileyFaceDavid(400,300);
+    //smileyFaceTimo();
+    //smileyFaceCrys();
 }
 
 function smileyFaceCrys(){
@@ -38,27 +38,27 @@ function smileyFaceCrys(){
     circle(385, 303, 10);
 }
 
-function smileyFaceDavid() {
+function smileyFaceDavid(x,y) {
     //head
     stroke("black");
     fill("yellow");
-    circle(405, 308, 50);
+    circle(x, y, 50);
     //eyes
     stroke("black");
     fill("pink");
-    ellipse(390, 290, 10, 5);
-    ellipse(410, 290, 10, 7);
+    ellipse(x-15, y-18, 10, 5);
+    ellipse(x+5, y-18, 10, 7);
     stroke("cyan");
-    circle(390, 290, 2);
-    circle(410, 290, 2);
+    circle(x-15, y-18, 2);
+    circle(x+5, y-18, 2);
     //mouth
     stroke("black");
     fill("grey")
-    arc(400, 310, 30, 15, -3.14, Math.PI);
+    arc(x-5, y+2, 30, 15, -3.14, Math.PI);
     stroke("black");
     fill("white")
-    arc(396, 304, 7, 7, 0, Math.PI);
-    arc(404, 304, 7, 7, 0, Math.PI);
+    arc(x-9, y-4, 7, 7, 0, Math.PI);
+    arc(x-1, y-4, 7, 7, 0, Math.PI);
 }
 
 function smileyFaceTimo() {
