@@ -1,7 +1,11 @@
-let smDavidX=400;
-let smDavidY=300;
-let directionDavidX=22;
-let directionDavidY=55;
+let smDavid={
+    x:400,
+    y:300,
+    directionX:1,
+    directionY:1,
+    speedX:2,
+    speedY:10
+};
 function smileyFaceDavid(x,y) {
     //head
     stroke("black");
@@ -26,12 +30,12 @@ function smileyFaceDavid(x,y) {
 }
 function checkLimitsSmDavid()
 {
-    if(smDavidX>=800||smDavidX<=0)
+    if(smDavid.x>=800-25||smDavid.x<=0+25)
     {   
-        directionDavidX*=-1;
+        smDavid.directionX*=-1;
     }
-    if(smDavidY>=600||smDavidY<=0)
+    if(smDavid.y>=600-25||smDavid.y<=0+25)
     {
-        directionDavidY*=-1;
+        smDavid.directionY*=-1;
     }
 }
