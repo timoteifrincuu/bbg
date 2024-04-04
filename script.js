@@ -10,7 +10,7 @@ let directionY = 30;
 
 let smCrysX=400;
 let smCrysY=300;
-let directionCrysX=100;
+let directionCrysX=70;
 let directionCrysY=10;
 
 function setup() {
@@ -21,7 +21,7 @@ function draw() {
     checkLimitsSmDavid();
     checkLimitsSmCrys();
     checkLimitsSmTimo();
-    
+
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
     smileyFaceTimo(400, 300);
