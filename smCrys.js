@@ -7,11 +7,11 @@ let smileyFaceCrys= {
 
 function checkLimitsSmCrys()
 {
-    if(smCrysX>=800||smCrysX<=0)
+    if(smCrysX>=800-50||smCrysX<=0+50)
     {   
         directionCrysX*=-1;
     }
-    if(smCrysY>=600||smCrysY<=0)
+    if(smCrysY>=600-50||smCrysY<=0+50)
     {
         directionCrysY*=-1;
     }
