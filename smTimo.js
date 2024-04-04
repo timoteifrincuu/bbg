@@ -1,17 +1,20 @@
-let smileyFaceTimoX = 400;
-let smileyFaceTimoY = 300;
-let directionX = 4;
-let directionY = 4;
+
+let smileyFaceTimo = {
+    x: 400,
+    y: 300,
+    directionX: 4,
+    directionY: 4
+}
 
 function checkLimitsSmTimo()
 {
-    if(smileyFaceTimoX>=800||smileyFaceTimoX<=0)
+    if(smileyFaceTimo.x>=800||smileyFaceTimo.x<=0)
     {   
-        directionX*=-1;
+        smileyFaceTimo.directionX*=-1;
     }
-    if(smileyFaceTimoY>=600||smileyFaceTimoY<=0)
+    if(smileyFaceTimo.y>=600||smileyFaceTimo.y<=0)
     {
-        directionY*=-1;
+        smileyFaceTimo.directionY*=-1;
     }
 }
 

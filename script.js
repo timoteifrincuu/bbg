@@ -10,6 +10,6 @@ function draw() {
 
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
-    smileyFaceTimo(smileyFaceTimoX=smileyFaceTimoX+directionX, smileyFaceTimoY=smileyFaceTimoY+directionY);
+    smileyFaceTimo(smileyFaceTimo.x=smileyFaceTimo.x+smileyFaceTimo.directionX, smileyFaceTimo.y=smileyFaceTimo.y+smileyFaceTimo.directionY);
     smileyFaceCrys(smCrysX=smCrysX+directionCrysX, smCrysY=smCrysY+directionCrysY);    
 }
