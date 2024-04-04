@@ -3,8 +3,8 @@ let smDavid={
     y:300,
     directionX:1,
     directionY:1,
-    speedX:5,
-    speedY:3
+    speedX:2,
+    speedY:10
 };
 function smileyFaceDavid(x,y) {
     //head
