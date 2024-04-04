@@ -1,15 +1,15 @@
-/*let smCrysX=400;
+let smCrysX=400;
 let smCrysY=300;
 let directionCrysX=1;
 let directionCrysY=1;
 
 function checkLimitsSmCrys()
 {
-    if(smCrysX>=800||smCrysX<=0)
+    if(smCrysX>=800-50||smCrysX<=0+50)
     {   
         directionCrysX*=-1;
     }
-    if(smCrysY>=600||smCrysY<=0)
+    if(smCrysY>=600-50||smCrysY<=0+50)
     {
         directionCrysY*=-1;
     }
@@ -36,4 +36,4 @@ function smileyFaceCrys(x,y){
     fill("white")
     arc(x-9, y-4, 7, 7, 0, Math.PI);
     arc(x-1, y-4, 7, 7, 0, Math.PI);
-}*/
+}

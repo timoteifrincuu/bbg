@@ -4,21 +4,22 @@ let smTimo = {
     y: 300,
     directionX: 1,
     directionY: 1,
-    speed: 3
+    speedX: 2,
+    speedY: 3,
+    ray: 25
 };
 
 function checkLimitsSmTimo()
 {
-    if(smTimo.x >= 800 || smTimo.x <= 0){
+    if(smTimo.x >= 800-25 || smTimo.x <= 0+25)
+    {
         smTimo.directionX*=-1;
     }   
-    smTimo.x += smTimo.directionX * smTimo.speed;
     
-    if(smTimo.y >= 600 || smTimo.y <= 0)
+    if(smTimo.y >= 600-25 || smTimo.y <= 0+25)
     {
         smTimo.directionY*=-1;
     }
-    smTimo.y += smTimo.directionY * smTimo.speed;
 
 }
 
@@ -32,8 +33,8 @@ function smileyFaceTimo(x,y) {
     fill("white");
     stroke("white");
     //eyes
-    ellipse(x-10, y-10, 10, 5);
-    ellipse(x+10, y-10, 10, 5);
+    ellipse(x-(smTimo.ray*2)/5, y-10, 10, 5);
+    ellipse(x+(smTimo.ray*2)/5, y-10, 10, 5);
     //pupils
     stroke("blue");
     fill("black");
