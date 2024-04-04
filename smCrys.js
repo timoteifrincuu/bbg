@@ -1,4 +1,4 @@
-let smCrysX=400;
+/*let smCrysX=400;
 let smCrysY=300;
 let directionCrysX=1;
 let directionCrysY=1;
@@ -36,4 +36,4 @@ function smileyFaceCrys(x,y){
     fill("white")
     arc(x-9, y-4, 7, 7, 0, Math.PI);
     arc(x-1, y-4, 7, 7, 0, Math.PI);
-}
+}*/
