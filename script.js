@@ -1,15 +1,12 @@
 let smDavidX=400;
 let smDavidY=300;
-let directionDavidX=5;
+let directionDavidX=22;
 let directionDavidY=55;
-let tHeight = 1000;
-let tWidth = 1000;
 
 let smileyFaceTimoX = 400;
 let smileyFaceTimoY = 300;
-
-let directionX = 1;
-let directionY = 1;
+let directionX = 110;
+let directionY = 30;
 
 function setup() {
     createCanvas(800, 600);
@@ -17,9 +14,10 @@ function setup() {
 
 function draw() {
     checkLimitsSmDavid();
+    checkLimitsSmTimo()
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
-    smileyFaceTimo(400, 300);
+    smileyFaceTimo(smileyFaceTimoX = smileyFaceTimoX + directionX, smileyFaceTimoY = smileyFaceTimoY + directionY);
     smileyFaceCrys(400,300);
 }
 
@@ -78,6 +76,18 @@ function smileyFaceDavid(x,y) {
     fill("white")
     arc(x-9, y-4, 7, 7, 0, Math.PI);
     arc(x-1, y-4, 7, 7, 0, Math.PI);
+}
+
+function checkLimitsSmTimo()
+{
+    if(smileyFaceTimoX>=800||smileyFaceTimoX<=0)
+    {   
+        directionX*=-1;
+    }
+    if(smileyFaceTimoY>=600||smileyFaceTimoY<=0)
+    {
+        directionY*=-1;
+    }
 }
 
 function smileyFaceTimo(x,y) {
