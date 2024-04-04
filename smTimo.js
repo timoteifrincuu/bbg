@@ -8,11 +8,11 @@ let smileyFaceTimo = {
 
 function checkLimitsSmTimo()
 {
-    if(smileyFaceTimo.x>=800||smileyFaceTimo.x<=0)
+    if(smileyFaceTimo.x>=800-20||smileyFaceTimo.x<=0+20)
     {   
         smileyFaceTimo.directionX*=-1;
     }
-    if(smileyFaceTimo.y>=600||smileyFaceTimo.y<=0)
+    if(smileyFaceTimo.y>=600-20||smileyFaceTimo.y<=0+20)
     {
         smileyFaceTimo.directionY*=-1;
     }
