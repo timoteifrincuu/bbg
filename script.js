@@ -2,8 +2,6 @@ let smDavidX=400;
 let smDavidY=300;
 let directionDavidX=5;
 let directionDavidY=55;
-let tHeight = 1000;
-let tWidth = 1000;
 
 let smileyFaceTimoX = 400;
 let smileyFaceTimoY = 300;
@@ -11,23 +9,42 @@ let smileyFaceTimoY = 300;
 let directionX = 1;
 let directionY = 1;
 
+let smCrysX=400;
+let smCrysY=300;
+let directionCrysX=100;
+let directionCrysY=10;
+
 function setup() {
     createCanvas(800, 600);
 }
 
 function draw() {
     checkLimitsSmDavid();
+    checkLimitsSmCrys();
+    
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
     smileyFaceTimo(400, 300);
-    smileyFaceCrys(400,300);
+    smileyFaceCrys(smCrysX=smCrysX+directionCrysX, smCrysY=smCrysY+directionCrysY);
+}
+
+function checkLimitsSmCrys()
+{
+    if(smCrysX>=800||smCrysX<=0)
+    {   
+        directionCrysX*=-1;
+    }
+    if(smCrysY>=600||smCrysY<=0)
+    {
+        directionCrysY*=-1;
+    }
 }
 
 function smileyFaceCrys(x,y){
     //head
-    stroke("green");
-    fill("pink");
-    circle(x, y, 50);
+    stroke("black");
+    fill("orange");
+    circle(x, y, 100);
     //eyes
     stroke("black");
     fill("yellow");
@@ -45,6 +62,7 @@ function smileyFaceCrys(x,y){
     arc(x-9, y-4, 7, 7, 0, Math.PI);
     arc(x-1, y-4, 7, 7, 0, Math.PI);
 }
+
 function checkLimitsSmDavid()
 {
     if(smDavidX>=800||smDavidX<=0)
