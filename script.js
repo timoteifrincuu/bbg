@@ -1,9 +1,7 @@
 let smDavidX=400;
 let smDavidY=300;
-let directionDavidX=5;
+let directionDavidX=22;
 let directionDavidY=55;
-let tHeight = 1000;
-let tWidth = 1000;
 
 let smileyFaceTimoX = 400;
 let smileyFaceTimoY = 300;
