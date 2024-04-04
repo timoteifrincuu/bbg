@@ -5,8 +5,13 @@ let directionDavidY=55;
 
 let smileyFaceTimoX = 400;
 let smileyFaceTimoY = 300;
-let directionX = 110;
-let directionY = 30;
+let directionX = 10;
+let directionY = 15;
+
+let smCrysX=400;
+let smCrysY=300;
+let directionCrysX=100;
+let directionCrysY=10;
 
 function setup() {
     createCanvas(800, 600);
@@ -14,6 +19,25 @@ function setup() {
 
 function draw() {
     checkLimitsSmDavid();
+    checkLimitsSmCrys();
+    checkLimitsSmTimo();
+    
+    background(200);
+    smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
+    smileyFaceTimo(smileyFaceTimoX=smileyFaceTimoX+directionX, smileyFaceTimoY=smileyFaceTimoY+directionY);
+    smileyFaceCrys(smCrysX=smCrysX+directionCrysX, smCrysY=smCrysY+directionCrysY);
+}
+
+function checkLimitsSmCrys()
+{
+    if(smCrysX>=800||smCrysX<=0)
+    {   
+        directionCrysX*=-1;
+    }
+    if(smCrysY>=600||smCrysY<=0)
+    {
+        directionCrysY*=-1;
+    }
     checkLimitsSmTimo()
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
@@ -23,9 +47,9 @@ function draw() {
 
 function smileyFaceCrys(x,y){
     //head
-    stroke("green");
-    fill("pink");
-    circle(x, y, 50);
+    stroke("black");
+    fill("orange");
+    circle(x, y, 100);
     //eyes
     stroke("black");
     fill("yellow");
@@ -43,6 +67,7 @@ function smileyFaceCrys(x,y){
     arc(x-9, y-4, 7, 7, 0, Math.PI);
     arc(x-1, y-4, 7, 7, 0, Math.PI);
 }
+
 function checkLimitsSmDavid()
 {
     if(smDavidX>=800||smDavidX<=0)
@@ -115,5 +140,5 @@ function smileyFaceTimo(x,y) {
 
     //NOSE
     fill("pink");
-    circle(400, 300, 10);
+    circle(x, y, 10);
 }
