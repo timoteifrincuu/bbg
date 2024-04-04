@@ -5,8 +5,8 @@ let directionDavidY=55;
 
 let smileyFaceTimoX = 400;
 let smileyFaceTimoY = 300;
-let directionX = 110;
-let directionY = 30;
+let directionX = 10;
+let directionY = 15;
 
 let smCrysX=400;
 let smCrysY=300;
@@ -24,7 +24,7 @@ function draw() {
 
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
-    smileyFaceTimo(400, 300);
+    smileyFaceTimo(smileyFaceTimoX=smileyFaceTimoX+directionX, smileyFaceTimoY=smileyFaceTimoY+directionY);
     smileyFaceCrys(smCrysX=smCrysX+directionCrysX, smCrysY=smCrysY+directionCrysY);
 }
 
@@ -140,5 +140,5 @@ function smileyFaceTimo(x,y) {
 
     //NOSE
     fill("pink");
-    circle(400, 300, 10);
+    circle(x, y, 10);
 }
