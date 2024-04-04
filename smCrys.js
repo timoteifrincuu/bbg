@@ -1,7 +1,9 @@
-let smCrysX=400;
-let smCrysY=300;
-let directionCrysX=1;
-let directionCrysY=1;
+let smileyFaceCrys= {
+    x: 400,
+    y: 300,
+    directionX: 1,
+    directionY: 1
+}
 
 function checkLimitsSmCrys()
 {

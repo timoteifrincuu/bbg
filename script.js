@@ -11,5 +11,5 @@ function draw() {
     background(200);
     smileyFaceDavid(smDavidX=smDavidX+directionDavidX,smDavidY=smDavidY+directionDavidY);
     smileyFaceTimo(smileyFaceTimoX=smileyFaceTimoX+directionX, smileyFaceTimoY=smileyFaceTimoY+directionY);
-    smileyFaceCrys(smCrysX=smCrysX+directionCrysX, smCrysY=smCrysY+directionCrysY);    
+    smileyFaceCrys(smileyFaceCrys.x, smileyFaceCrys.y);
 }
