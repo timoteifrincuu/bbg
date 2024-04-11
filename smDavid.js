@@ -3,8 +3,8 @@ let smDavid={
     y:300,
     directionX:1,
     directionY:1,
-    speedX:10,
-    speedY:10,
+    speedX:1,
+    speedY:5,
     ray:25
 };
 function smileyFaceDavid(x,y) {
@@ -35,8 +35,14 @@ function checkLimitsSmDavid()
     {   
         smDavid.directionX*=-1;
     }
-    if(smDavid.y>=600-smDavid.ray||smDavid.y<=0+smDavid.ray)
+    if(smDavid.y<=0+smDavid.ray)
     {
+        smDavid.directionY*=-1;
+    }
+    if(smDavid.y>=600-smDavid.ray){
+        smDavid.ray=0;
+    }
+    if((smDavid.y+smDavid.ray>=pdDavid.y&&smDavid.y+smDavid.ray<=pdDavid.y+pdDavid.height)&&(smDavid.x+smDavid.ray>=pdDavid.x&&smDavid.x-smDavid.ray<=pdDavid.x+pdDavid.width)){
         smDavid.directionY*=-1;
     }
 }

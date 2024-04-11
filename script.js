@@ -19,6 +19,6 @@ function draw() {
     checkLimitsSmTimo();
     checkLimitsSmCrys();
 
-    createPaddle();
-
+    //createPaddle();
+    createPaddleDavid();
 }
