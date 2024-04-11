@@ -1,15 +1,24 @@
 
+let tableWidth = 800;
+let tableHeigth = 600;
+
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(tableWidth, tableHeigth);
 }
 
-function draw() {
-    checkLimitsSmDavid();
-    //checkLimitsSmCrys();
-    //checkLimitsSmTimo();
+function draw() {    
 
+    
     background(200);
-    smileyFaceDavid(smDavid.x=smDavid.x+(smDavid.directionX*smDavid.speedX),smDavid.y=smDavid.y+(smDavid.directionY*smDavid.speedY));
-    //smileyFaceTimo(smileyFaceTimoX=smileyFaceTimoX+directionX, smileyFaceTimoY=smileyFaceTimoY+directionY);
-    //smileyFaceCrys(smCrysX=smCrysX+directionCrysX, smCrysY=smCrysY+directionCrysY);    
+
+    smileyFaceDavid(smDavid.x, smDavid.y);
+    smileyFaceTimo(smTimo.x, smTimo.y);
+    smileyFaceCrys(smCrys.x, smCrys.y); 
+        
+    checkLimitsSmDavid();
+    checkLimitsSmTimo();
+    checkLimitsSmCrys();
+
+    createPaddle();
+
 }
