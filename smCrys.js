@@ -1,44 +1,49 @@
 let smCrys= {
     x: 400,
     y: 300,
+    ray: 150,
     directionX: 1,
     directionY: 2,
     speedX: 5,
     speedY: 2,
-    ray: 50
+    
 }
 
 function checkLimitsSmCrys()
 {
-    if(smCrys.x>=800-50||smCrys.x<=0+50)
+    if(smCrys.x>=tableWidth - smCrys||smCrys.x <= 0+smCrys.ray)
     {   
-        smCrys.directionX*=-1;
+        smCrys.directionX *= -1;
     }
-    if(smCrys.y>=600-50||smCrys.y<=0+50)
+    smCrys.x +=smCrys.directionX * smCrys.speedX;
+
+    if(smCrys.y>=tableWidth - smCrys.ray||smCrys.y<=0+ smCrys.ray)
     {
         smCrys.directionY*=-1;
     }
+    smCrys.y += smCrys.directionY * smCrys.speedY;
 }
 
 function smileyFaceCrys(x,y){
-    //head
-    stroke("black");
-    fill("orange");
-    circle(x, y, 100);
-    //eyes
-    stroke("cyan");
-    fill("cyan");
-    ellipse(x-15, y-18, 10, 5);
-    ellipse(x+5, y-18, 10, 7);
-    stroke("cyan");
-    circle(x-15, y-18, 2);
-    circle(x+5, y-18, 2);
-    //mouth
-    stroke("black");
-    fill("grey")
-    arc(x-5, y+2, 30, 15, -3.14, Math.PI);
-    stroke("blue");
-    fill("white")
-    arc(x-9, y-4, 7, 7, 0, Math.PI);
-    arc(x-1, y-4, 7, 7, 0, Math.PI);
+     // BODY
+  fill("Orange");
+  stroke("black");
+  circle(x, y, smCrys.ray * 2);
+
+  // EYE PUPILS
+  stroke("black");
+  fill("black");
+  circle(x - (smCrys.ray * 2) / 5, y - (smCrys.ray * 2) / 5, (smCrys.ray * 2) / 25);
+  circle(x + (smCrys.ray * 2) / 5, y - (smCrys.ray * 2) / 5, (smCrys.ray * 2) / 25);
+
+  // MOUNTH
+  stroke("green");
+  fill("gray");
+  arc(x, y + (smCrys.ray * 2) / 5, (smCrys.ray * 2) / 3, (smCrys.ray * 2) / 2, 0, Math.PI);
+
+  // CHEEKS
+  stroke("darkred");
+  fill("red");
+  circle(x + (smCrys.ray * 2) / 2.5, y + (smCrys.ray * 2) / 10, (smCrys.ray * 2) / 7.14);
+  circle(x - (smCrys.ray * 2) / 2.5, y + (smCrys.ray * 2) / 10, (smCrys.ray * 2) / 7.14);
 }
