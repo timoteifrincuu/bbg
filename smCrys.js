@@ -1,17 +1,22 @@
-let smCrysX=400;
-let smCrysY=300;
-let directionCrysX=1;
-let directionCrysY=1;
+let smCrys= {
+    x: 400,
+    y: 300,
+    directionX: 1,
+    directionY: 2,
+    speedX: 5,
+    speedY: 2,
+    ray: 50
+}
 
 function checkLimitsSmCrys()
 {
-    if(smCrysX>=800-50||smCrysX<=0+50)
+    if(smCrys.x>=800-50||smCrys.x<=0+50)
     {   
-        directionCrysX*=-1;
+        smCrys.directionX*=-1;
     }
-    if(smCrysY>=600-50||smCrysY<=0+50)
+    if(smCrys.y>=600-50||smCrys.y<=0+50)
     {
-        directionCrysY*=-1;
+        smCrys.directionY*=-1;
     }
 }
 
