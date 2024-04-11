@@ -5,7 +5,7 @@ let smDavid={
     directionY:1,
     speedX:10,
     speedY:10,
-    ray:290
+    ray:25
 };
 function smileyFaceDavid(x,y) {
     //head
