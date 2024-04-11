@@ -2,7 +2,7 @@ let pdTimo = {
     x:tableWidth/2, 
     y:550,
     color: "red",
-    width: 70,
+    width: 90,
     height: 10
     
 }

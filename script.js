@@ -21,4 +21,6 @@ function draw() {
 
     createPaddle();
 
+    //createBrick();
+
 }
