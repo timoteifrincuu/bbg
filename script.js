@@ -1,6 +1,9 @@
 
+let tableWidth = 800;
+let tableHeigth = 600;
+
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(tableWidth, tableHeigth);
 }
 
 function draw() {    
