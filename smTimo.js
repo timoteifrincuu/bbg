@@ -1,37 +1,32 @@
 
 let smTimo = {
     x: 400,
-    y: 300,
+    y: 450,
     directionX: 1,
     directionY: 1,
-    speedX: 3,
-    speedY: 3,
+    speedX: 5,
+    speedY: -5,
     ray: 15
 };
 
 function checkLimitsSmTimo()
 {
-    if(smTimo.x >= tableWidth - smTimo.ray || smTimo.x <= 0 + smTimo.ray)
-    {
+    if(smTimo.x>=800-smTimo.ray||smTimo.x<=0+smTimo.ray)
+    {   
         smTimo.directionX*=-1;
-    }   
-    
-    if(smTimo.y <= 0 + smTimo.ray)
+    }
+    if(smTimo.y<=0+smTimo.ray)
     {
         smTimo.directionY*=-1;
     }
-
-
-    //verifies paddle
-    if(
-        smTimo.y >= pdTimo.y - smTimo.ray && 
-        smTimo.x >=  pdTimo.x + smTimo.ray &&
-        smTimo.x <=  pdTimo.x + pdTimo.width - smTimo.ray
-    )
-    {
-        smTimo.directionY *= -1;
+    if(smTimo.y>=600-smTimo.ray){
+        smTimo.ray=0;
     }
-    smTimo.y += smTimo.directionY * smTimo.speedY;
+    if((smTimo.y+smTimo.ray>=pdTimo.y&&smTimo.y+smTimo.ray<=pdTimo.y+pdTimo.height)&&
+    (smTimo.x+smTimo.ray>=pdTimo.x&&smTimo.x-smTimo.ray<=pdTimo.x+pdTimo.width))
+    {
+        smTimo.directionY*=-1;
+    }
 }
 
 function smileyFaceTimo(x,y) {
