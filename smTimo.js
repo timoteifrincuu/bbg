@@ -4,41 +4,30 @@ let smTimo = {
     y: 450,
     directionX: 1,
     directionY: 1,
-    speedX: 2,
-    speedY: -2,
-    ray: 20
+    speedX: 5,
+    speedY: -5,
+    ray: 15
 };
 
 function checkLimitsSmTimo()
 {
-    //verifies paddle
-    if(
-        smTimo.y >= pdTimo.y - smTimo.ray && 
-        smTimo.y <= pdTimo.y + pdTimo.heigth &&
-        smTimo.x >=  pdTimo.x + smTimo.ray &&
-        smTimo.x <=  pdTimo.x + pdTimo.width - smTimo.ray
-    )
-    {
-        smTimo.directionY *= -1;
-        smTimo.directionX *= -1; // Add this line to reverse the horizontal direction as well
+    if(smTimo.x>=800-smTimo.ray||smTimo.x<=0+smTimo.ray)
+    {   
+        smTimo.directionX*=-1;
     }
-    smTimo.y += smTimo.directionY * smTimo.speedY;
-    smTimo.x += smTimo.directionX * smTimo.speedX; // Add this line to update the x position
-
-    //if smTimo goes below
-    if(smTimo.y >= tableHeigth-smTimo.ray)
+    if(smTimo.y<=0+smTimo.ray)
     {
-        smTimo.ray = 0;
+        smTimo.directionY*=-1;
     }
-
-    //if smTimo goes above, beyond the left boundary, or beyond the right boundary
-    if(smTimo.y <= smTimo.ray || smTimo.x <= smTimo.ray || smTimo.x >= tableWidth-smTimo.ray)
+    if(smTimo.y>=600-smTimo.ray){
+        smTimo.ray=0;
+    }
+    if((smTimo.y+smTimo.ray>=pdTimo.y&&smTimo.y+smTimo.ray<=pdTimo.y+pdTimo.height)&&
+    (smTimo.x+smTimo.ray>=pdTimo.x&&smTimo.x-smTimo.ray<=pdTimo.x+pdTimo.width))
     {
-        smTimo.directionY *= -1;
-        smTimo.directionX *= -1;
+        smTimo.directionY*=-1;
     }
 }
-
 
 function smileyFaceTimo(x,y) {
     //BODY
