@@ -5,6 +5,7 @@ let tableHeigth = 600;
 function setup() {
     createCanvas(tableWidth, tableHeigth);
     initBricks();
+    initBricksDavid();
 }
 
 function draw() {    
@@ -19,8 +20,10 @@ function draw() {
     //checkLimitsSmCrys();
 
     createPaddle();
-    
+
     createPaddleDavid();
 
     createBricks();
+
+    createBricksDavid();
 }

@@ -4,14 +4,14 @@ let bricks = []
 const bricksRows = 1
 const bricksCols = 1
 const rowBricksNumber = 6
-
+const distanceBetweenBricks=80;
 
 
 function initBricks(){
     for (let i = 0.5; i < bricksRows*rowBricksNumber; i++) {
         bricks.push({
             hit: false,
-            x: i*80,
+            x: i*distanceBetweenBricks,
             y: 20,
             color: "brown",
             width: 70,
