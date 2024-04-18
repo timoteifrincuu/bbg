@@ -7,8 +7,6 @@ function setup() {
 }
 
 function draw() {    
-
-    
     background(200);
 
     smileyFaceDavid(smDavid.x=smDavid.x+(smDavid.directionX*smDavid.speedX),smDavid.y=smDavid.y+(smDavid.directionY*smDavid.speedY));
@@ -19,6 +17,6 @@ function draw() {
     checkLimitsSmTimo();
     checkLimitsSmCrys();
 
-    //createPaddle();
+    createPaddle();
     createPaddleDavid();
 }
