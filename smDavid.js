@@ -31,18 +31,17 @@ function smileyFaceDavid(x,y) {
 }
 function checkLimitsSmDavid()
 {
-    if(smDavid.x>=800-smDavid.ray||smDavid.x<=0+smDavid.ray)
-    {   
-        smDavid.directionX*=-1;
+    if(smDavid.x >= 800 - smDavid.ray || smDavid.x <= 0 + smDavid.ray) {   
+        smDavid.directionX *= -1;
     }
-    if(smDavid.y<=0+smDavid.ray)
-    {
-        smDavid.directionY*=-1;
+    if(smDavid.y <= 0 + smDavid.ray) {
+        smDavid.directionY *= -1;
     }
-    if(smDavid.y>=600-smDavid.ray){
-        smDavid.ray=0;
+    if(smDavid.y >= 600 - smDavid.ray) {
+        smDavid.ray = 0;
     }
-    if((smDavid.y+smDavid.ray>=pdDavid.y&&smDavid.y+smDavid.ray<=pdDavid.y+pdDavid.height)&&(smDavid.x+smDavid.ray>=pdDavid.x&&smDavid.x-smDavid.ray<=pdDavid.x+pdDavid.width)){
-        smDavid.directionY*=-1;
+    if((smDavid.y + smDavid.ray >= pdDavid.y && smDavid.y - smDavid.ray <= pdDavid.y + pdDavid.height) && (smDavid.x + smDavid.ray >= pdDavid.x && smDavid.x - smDavid.ray <= pdDavid.x + pdDavid.width)) {
+        smDavid.directionY *= -1;
+        smDavid.y = pdDavid.y - smDavid.ray; 
     }
 }
